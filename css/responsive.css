@@ -163,6 +163,7 @@ body {
 /* --- Адаптивный hero-блок --- */
 
 .hero {
+  width: min(100% - 32px, 1100px);
   padding: var(--space-lg) var(--space-md);
   margin-inline: auto;
 }
