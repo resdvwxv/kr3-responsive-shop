@@ -633,31 +633,15 @@ a:focus-visible {
 }
 
 /* ===============================
-11. Адаптивность сетки товаров
+11. Адаптивность сетки товаров (оставлено для обратной совместимости)
 =============================== */
 
 @media (max-width: 768px) {
-  .products-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .product-detail__inner {
     grid-template-columns: 1fr;
-  }
-
-  .catalog-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .filters-form fieldset {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-md);
   }
 }
 
 @media (max-width: 480px) {
-  .products-grid {
-    grid-template-columns: 1fr;
-  }
+  /* Базовая сетка в 1 колонку задана в responsive.css */
 }
