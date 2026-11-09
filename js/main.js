@@ -20,11 +20,17 @@ Promise.all([
 
 function setActiveNavLink() {
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  const isProductPage = currentPage.endsWith('.html') && window.location.pathname.includes('/products/');
   const navLinks = document.querySelectorAll('.site-nav__link');
   navLinks.forEach((link) => {
     const href = link.getAttribute('href');
     if (href === currentPage || (currentPage === '' && href === 'index.html')) {
       link.classList.add('site-nav__link--active');
+      link.setAttribute('aria-current', 'page');
+    }
+    if (isProductPage && href === 'catalog.html') {
+      link.classList.add('site-nav__link--active');
+      link.setAttribute('aria-current', 'page');
     }
   });
 }
