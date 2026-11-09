@@ -78,7 +78,7 @@ main {
   padding: var(--space-sm) var(--space-lg);
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -341,13 +341,11 @@ main {
   max-width: var(--container-width);
   margin: 0 auto var(--space-xl);
   display: grid;
-  grid-template-columns: 260px 1fr;
-  grid-template-areas: "filters products";
   gap: var(--space-lg);
 }
 
 .catalog-filters {
-  grid-area: filters;
+  /* grid-area удалён — порядок из документа */
   padding: var(--space-md);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
@@ -355,7 +353,7 @@ main {
 }
 
 .catalog-products {
-  grid-area: products;
+  /* grid-area удалён — порядок из документа */
 }
 
 /* --- Фильтры (filters-form) --- */

@@ -262,13 +262,14 @@ body {
 
 .catalog-layout {
   display: grid;
+  grid-template-columns: 1fr;
   gap: var(--space-lg, 24px);
   max-width: var(--container-width, 1100px);
   margin: 0 auto var(--space-xl);
 }
 
 .catalog-filters {
-  order: -1;
+  /* order удалён — фильтры в документе идут первыми */
 }
 
 @media (min-width: 1024px) {
