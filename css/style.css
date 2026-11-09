@@ -206,7 +206,7 @@ main {
 
 .hero {
   max-width: var(--container-width);
-  margin: var(--space-xl) auto var(--space-xl);
+  margin: var(--space-xl) var(--space-lg) var(--space-xl);
   padding: var(--space-xl) var(--space-lg);
   background-color: var(--color-surface-accent);
   border-radius: var(--radius-lg);
@@ -217,6 +217,7 @@ main {
 .section {
   max-width: var(--container-width);
   margin: 0 auto var(--space-xl);
+  padding: 0 var(--space-lg);
 }
 
 /* --- Карточка товара (product-card) --- */
