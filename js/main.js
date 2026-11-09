@@ -11,6 +11,7 @@ Promise.all([
     if (headerPlaceholder) {
       headerPlaceholder.outerHTML = headerHtml;
       setActiveNavLink();
+      initBurgerMenu();
     }
     const footerPlaceholder = document.getElementById('footer-placeholder');
     if (footerPlaceholder) {
@@ -20,12 +21,44 @@ Promise.all([
 
 function setActiveNavLink() {
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  const isProductPage = currentPage.endsWith('.html') && window.location.pathname.includes('/products/');
   const navLinks = document.querySelectorAll('.site-nav__link');
   navLinks.forEach((link) => {
     const href = link.getAttribute('href');
     if (href === currentPage || (currentPage === '' && href === 'index.html')) {
       link.classList.add('site-nav__link--active');
+      link.setAttribute('aria-current', 'page');
     }
+    if (isProductPage && href === 'catalog.html') {
+      link.classList.add('site-nav__link--active');
+      link.setAttribute('aria-current', 'page');
+    }
+  });
+}
+
+// ===============================
+// 0.5. Бургер-меню (мобильная навигация)
+// ===============================
+
+function initBurgerMenu() {
+  const burgerBtn = document.querySelector('.burger-btn');
+  const siteNav = document.getElementById('site-nav');
+
+  if (!burgerBtn || !siteNav) return;
+
+  burgerBtn.addEventListener('click', () => {
+    const isOpen = siteNav.classList.toggle('site-nav--open');
+    burgerBtn.setAttribute('aria-expanded', String(isOpen));
+    burgerBtn.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
+  });
+
+  // Закрыть меню при клике на ссылку
+  siteNav.querySelectorAll('.site-nav__link').forEach((link) => {
+    link.addEventListener('click', () => {
+      siteNav.classList.remove('site-nav--open');
+      burgerBtn.setAttribute('aria-expanded', 'false');
+      burgerBtn.setAttribute('aria-label', 'Открыть меню');
+    });
   });
 }
 

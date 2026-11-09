@@ -12,8 +12,9 @@
     <script src="js/main.js" defer></script>
 </head>
 <body>
+    <a class="skip-link" href="#main">Перейти к основному содержимому</a>
     <div id="header-placeholder"></div>
-    <main>
+    <main id="main">
         <section class="hero">
             <div class="hero__overlay"></div>
             <div class="hero__content" >
@@ -73,7 +74,7 @@
             </p>
         </aside>
     </main>
-    <a class="scroll-top" href="#" aria-label="Наверх">↑</a>
+    <a class="scroll-top" href="#main" aria-label="Наверх">↑</a>
 
     <div id="footer-placeholder"></div>
     <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
@@ -92,6 +93,7 @@
                     minlength="2"
                     autocomplete="given-name"
                     required
+                    aria-required="true"
                 >
             </div>
 
@@ -105,6 +107,7 @@
                     placeholder="example@mail.ru"
                     autocomplete="email"
                     required
+                    aria-required="true"
                 >
             </div>
 
@@ -119,6 +122,7 @@
                     placeholder="+7 (900) 000-00-00"
                     pattern="^[\\+]?[0-9\\s\\-\\(\\)]{10,20}$"
                     required
+                    aria-required="true"
                 >
             </div>
             <small>Формат: +7 (900) 000-00-00</small>
@@ -135,7 +139,7 @@
 
             <div class="order-form__field">
                 <label class="order-form__label" for="order-topic">Тема заявки</label>
-                <select class="order-form__select" id="order-topic" name="topic" required>
+                <select class="order-form__select" id="order-topic" name="topic" required aria-required="true">
                     <option value="">Выберите тему</option>
                     <option value="product">Заказ товара</option>
                     <option value="consultation">Консультация</option>
@@ -161,6 +165,7 @@
                         name="agreement"
                         type="checkbox"
                         required
+                        aria-required="true"
                     >
                     Я согласен на обработку данных
                 </label>

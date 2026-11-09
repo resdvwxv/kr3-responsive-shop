@@ -10,28 +10,43 @@
 ## Структура проекта
 
 ```
-kr1-html-css-shop/
-├── index.html        — главная страница (hero-блок, преимущества, популярные товары)
-├── catalog.html      — каталог товаров с фильтрами
-├── product.html      — карточка товара с таблицей характеристик
-├── order.html        — страница оформления заявки
-├── contacts.html     — контактная информация и обратная связь
-├── products/
-│   ├── shapets.html      — Шапец
-│   ├── bitubisas.html    — Битубизес
-│   └── morkovnye-piatki.html — Морковные пятки
-├── bitubisas.html    — цифровая лицензия «Битубизес»
-├── morkovnye-piatki.html — зазеркальное блюдо «Морковные пятки»
+kr3-responsive-shop/
+├── catalog.html        — каталог товаров с фильтрами
+├── contacts.html       — контактная информация и обратная связь
 ├── css/
-│   └── style.css     — общие стили (переменные, компоненты, состояния)
+│   ├── responsive.css  — адаптивные стили (Mobile First)
+│   └── style.css       — общие стили (переменные, компоненты, состояния)
+├── doc/
+│   ├── docx/
+│   ├── kr_3.md
+│   ├── pr_12.md
+│   ├── pr_13.md
+│   └── pr_14.md
+├── favicon.svg         — фиолетовый кристалл
+├── images/
+│   ├── Bitubisas.png
+│   ├── glamorous.svg
+│   ├── Morkovniy_piatky.png
+│   └── Shapec.png
+├── index.html          — главная страница (hero-блок, преимущества, популярные товары)
 ├── js/
-│   └── main.js       — модалка, валидация, загрузка шапки, скролл-наверх
-├── images/           — изображения товаров и иконок
+│   └── main.js         — модалка, валидация, загрузка шапки, скролл-наверх
+├── lighthouse/
+│   ├── catalog.html    — HTML-отчёт Lighthouse — каталог
+│   ├── index.html      — HTML-отчёт Lighthouse — главная
+│   ├── order.html      — HTML-отчёт Lighthouse — форма заявки
+│   ├── screenshot-catalog.png
+│   ├── screenshot-index.png
+│   └── screenshot-order.png
+├── order.html          — страница оформления заявки
 ├── partials/
-│   └── header.html   — шапка сайта (подгружается через fetch)
-├── favicon.svg       — фиолетовый кристалл
-├── README.md         — описание проекта
-└── .gitignore        — исключения Git
+│   ├── footer.html     — подвал сайта
+│   └── header.html     — шапка сайта (подгружается через fetch)
+├── products/
+│   ├── bitubisas.html      — Битубизес
+│   ├── morkovnye-piatki.html — Морковные пятки
+│   └── shapets.html        — Шапец
+└── README.md         — описание проекта
 ```
 
 ## Технологии
@@ -54,10 +69,6 @@ kr1-html-css-shop/
 5. Откройте страницу «Товар» — таблица характеристик, кнопка заявки открывает модальное окно.
 6. Страница «Заявка» — полная форма оформления заказа с валидацией.
 7. В консоли браузера ошибок быть не должно.
-
-## Ссылка на опубликованный проект
-
-GitHub Pages: https://resdvwxv.github.io/kr1-html-css-shop/
 
 ## Автор
 
@@ -146,3 +157,40 @@ GitHub Pages: https://resdvwxv.github.io/kr1-html-css-shop/
 - Практическая работа 6: реализованы Flexbox (навигация) и CSS Grid (карточки товаров, каталог с фильтрами).
 - Практическая работа 7: выполнен рефакторинг CSS-стилей по методологии БЭМ.
 - Практическая работа 12: создана адаптивная версия сайта (Mobile First, медиазапросы, responsive images).
+
+### Практическая работа №13
+
+Выполнен A11y-аудит и исправление проблем доступности:
+
+- проверена семантическая структура (h1 → h2 → h3) на всех страницах;
+- добавлен skip-link «Перейти к основному содержимому» на все 7 страниц;
+- добавлен `id="main"` на все элементы `<main>`;
+- добавлен `aria-current="page"` на активную ссылку навигации (JS);
+- улучшена контрастность текста: `--color-text: #1f2937`, `--color-muted: #4b5563`;
+- добавлен глобальный `:focus-visible` с `outline: 3px solid var(--color-primary)`;
+- исправлены ссылки «Наверх» с `href="#"` на `href="#main"`;
+- добавлен `aria-required="true"` на обязательные поля всех форм (order.html, contacts.html, модальное окно);
+- проверены изображения и `alt`-описания;
+- проверены формы и связанные `<label for="...">`;
+- модальное окно использует `<dialog>` с `aria-labelledby`;
+- выполнен Lighthouse-аудит (Accessibility) на 3 страницах (методичка требует проверять страницы с формами):
+  - `index.html` — **100/100**;
+  - `catalog.html` — **100/100**;
+  - `order.html` — **100/100**.
+
+### Lighthouse-отчёты
+
+Отчёты и скриншоты сохранены в папке `lighthouse/`:
+
+| Файл | Описание |
+|---|---|
+| `index.html` | HTML-отчёт Lighthouse — главная |
+| `catalog.html` | HTML-отчёт Lighthouse — каталог |
+| `order.html` | HTML-отчёт Lighthouse — форма заявки |
+| `screenshot-index.png` | Скриншот отчёта главной |
+| `screenshot-catalog.png` | Скриншот отчёта каталога |
+| `screenshot-order.png` | Скриншот отчёта формы заявки |
+
+### Исправление изображений
+
+- В `products/shapets.html` у карточек «Похожие товары» добавлены `srcset`, `loading="lazy"`, `width`/`height` (было без них).

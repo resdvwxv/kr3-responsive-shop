@@ -5,8 +5,8 @@
 :root {
   /* Основные цвета проекта */
   --color-bg: #ffffff;
-  --color-text: #222222;
-  --color-muted: #666666;
+  --color-text: #1f2937;
+  --color-muted: #4b5563;
   --color-primary: #0057b8;
   --color-primary-dark: #003f86;
   --color-border: #dddddd;
@@ -341,13 +341,11 @@ main {
   max-width: var(--container-width);
   margin: 0 auto var(--space-xl);
   display: grid;
-  grid-template-columns: 260px 1fr;
-  grid-template-areas: "filters products";
   gap: var(--space-lg);
 }
 
 .catalog-filters {
-  grid-area: filters;
+  /* grid-area удалён — порядок из документа */
   padding: var(--space-md);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
@@ -355,7 +353,8 @@ main {
 }
 
 .catalog-products {
-  grid-area: products;
+  /* grid-area удалён — порядок из документа */
+  padding-right: var(--space-md);
 }
 
 /* --- Фильтры (filters-form) --- */
