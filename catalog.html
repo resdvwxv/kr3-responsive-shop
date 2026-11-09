@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Каталог товаров учебного интернет-магазина.">
+    <title>Каталог — Beyond Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <main>
+        <nav class="breadcrumbs" aria-label="Хлебные крошки">
+            <a class="breadcrumbs__link" href="index.html">Главная</a>
+            <span class="breadcrumbs__current">Каталог</span>
+        </nav>
+        <section class="section">
+            <h1>Каталог товаров</h1>
+            <!--<p>
+                На этой странице представлен учебный каталог товаров.
+                В дальнейшем здесь будут добавлены фильтры, сортировка и более
+                подробные карточки.
+            </p>-->
+        </section>
+        <section class="catalog-layout">
+            <aside class="catalog-filters">
+                <h2>Фильтры</h2>
+                <form class="filters-form" action="#" method="get">
+                    <fieldset>
+                        <legend>Категория</legend>
+                        <label>
+                            <input type="checkbox" name="category" value="all">
+                            Все товары
+                        </label>
+                        <label>
+                            <input type="checkbox" name="category" value="popular">
+                            Популярные
+                        </label>
+                        <label>
+                            <input type="checkbox" name="category" value="new">
+                            Новинки
+                        </label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Цена</legend>
+                        <label for="price-from">От</label>
+                        <input class="filters-form__input" id="price-from" name="price-from" type="number" min="0" placeholder="0">
+                        <label for="price-to">До</label>
+                        <input class="filters-form__input" id="price-to" name="price-to" type="number" min="0" placeholder="5000">
+                    </fieldset>
+                    <button class="button button--primary" type="submit">Применить</button>
+                </form>
+            </aside>
+            <section class="catalog-products">
+                <h2>Список товаров</h2>
+                <div class="products-grid">
+                    <a href="products/shapets.html" class="product-card product-card--discount" aria-label="Шапец — 5 000 руб.">
+                        <span class="product-card__badge">Хит</span>
+                        <img class="product-card__image" src="images/Shapec.png" alt="Шапец — головной убор статуса">
+                        <h3 class="product-card__title">Шапец</h3>
+                        <p class="product-card__description">Больше чем просто головной убор — абсолютный символ стиля и статуса в Сумеречной роще.</p>
+                        <p class="product-card__price">Цена: 5 000 руб.</p>
+                    </a>
+                    <a href="products/bitubisas.html" class="product-card product-card--featured" aria-label="Битубизес — 2 500 руб.">
+                        <img class="product-card__image" src="images/Bitubisas.png" alt="Битубизес — цифровая лицензия">
+                        <h3 class="product-card__title">Битубизес</h3>
+                        <p class="product-card__description">Зазеркальный маркер надежности и личной эффективности. Создаётся Большим Алмазом Inc.</p>
+                        <p class="product-card__price">Цена: 2 500 руб.</p>
+                    </a>
+                    <a href="products/morkovnye-piatki.html" class="product-card product-card--discount" aria-label="Морковные пятки — 800 руб.">
+                        <span class="product-card__badge">Новинка</span>
+                        <img class="product-card__image" src="images/Morkovniy_piatky.png" alt="Морковные пятки — гастрономическое открытие">
+                        <h3 class="product-card__title">Морковные пятки</h3>
+                        <p class="product-card__description">Изысканное зазеркальное блюдо: нежные плоды с огорода бабы Жули. При сборе издают хохот.</p>
+                        <p class="product-card__price">Цена: 800 руб.</p>
+                    </a>
+                </div>
+            </section>
+        </section>
+    </main>
+    <a class="scroll-top" href="#" aria-label="Наверх">↑</a>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Учебный проект. Все права защищены.</p>
+        <p>Дисциплина: Фронтенд и бэкенд разработка</p>
+    </footer>
+</body>
+</html>
