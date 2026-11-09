@@ -273,7 +273,7 @@ body {
   /* order удалён — фильтры в документе идут первыми */
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 960px) {
   .catalog-layout {
     grid-template-columns: 280px minmax(0, 1fr);
     align-items: start;
