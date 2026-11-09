@@ -1,15 +1,20 @@
 // ===============================
-// 0. Загрузка шапки из partials/header.html
+// 0. Загрузка шапки и подвала из partials/
 // ===============================
 
 // fetch() не подчиняется тегу <base>, поэтому путь абсолютный от сайта
-fetch('partials/header.html')
-  .then((response) => response.text())
-  .then((html) => {
-    const placeholder = document.getElementById('header-placeholder');
-    if (placeholder) {
-      placeholder.outerHTML = html;
+Promise.all([
+  fetch('partials/header.html').then((r) => r.text()),
+  fetch('partials/footer.html').then((r) => r.text()),
+]).then(([headerHtml, footerHtml]) => {
+    const headerPlaceholder = document.getElementById('header-placeholder');
+    if (headerPlaceholder) {
+      headerPlaceholder.outerHTML = headerHtml;
       setActiveNavLink();
+    }
+    const footerPlaceholder = document.getElementById('footer-placeholder');
+    if (footerPlaceholder) {
+      footerPlaceholder.outerHTML = footerHtml;
     }
   });
 
