@@ -7,6 +7,7 @@
     <meta name="description" content="Морковные пятки — зазеркальное гастрономическое блюдо для званых ужинов.">
     <title>Морковные пятки — Beyond Shop</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
     <link rel="icon" type="image/svg+xml" href="../favicon.svg">
     <script src="../js/main.js" defer></script>
 </head>
@@ -25,9 +26,12 @@
                     <img
                         class="product-detail__image"
                         src="../images/Morkovniy_piatky.png"
+                        srcset="../images/Morkovniy_piatky.png 480w, ../images/Morkovniy_piatky.png 640w, ../images/Morkovniy_piatky.png 960w"
+                        sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
                         alt="Фото морковных пяток — зазеркального гастрономического открытия"
-                        width="400"
-                        height="300"
+                        width="640"
+                        height="480"
+                        loading="lazy"
                     >
                 </div>
                 <div class="product-detail__info">
@@ -57,6 +61,7 @@
 
         <section class="section" id="characteristics">
             <h2>Характеристики</h2>
+            <div class="table-wrapper">
             <table class="product-table">
                 <caption>Технические характеристики товара</caption>
                 <thead>
@@ -92,6 +97,7 @@
                     </tr>
                 </tbody>
             </table>
+            </div>
         </section>
 
         <section class="section">
@@ -99,13 +105,13 @@
             <div class="products-grid">
                 <a href="../products/shapets.html" class="product-card product-card--discount" aria-label="Шапец — 5 000 руб.">
                     <span class="product-card__badge">Хит</span>
-                    <img class="product-card__image" src="../images/Shapec.png" alt="Шапец — головной убор статуса">
+                    <img class="product-card__image" src="../images/Shapec.png" srcset="../images/Shapec.png 480w, ../images/Shapec.png 640w, ../images/Shapec.png 960w" sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw" alt="Шапец — головной убор статуса" width="640" height="480" loading="lazy">
                     <h3 class="product-card__title">Шапец</h3>
                     <p class="product-card__description">Больше чем просто головной убор — абсолютный символ стиля и статуса в Сумеречной роще.</p>
                     <p class="product-card__price">Цена: 5 000 руб.</p>
                 </a>
                 <a href="../products/bitubisas.html" class="product-card product-card--featured" aria-label="Битубизес — 2 500 руб.">
-                    <img class="product-card__image" src="../images/Bitubisas.png" alt="Битубизес — цифровая лицензия">
+                    <img class="product-card__image" src="../images/Bitubisas.png" srcset="../images/Bitubisas.png 480w, ../images/Bitubisas.png 640w, ../images/Bitubisas.png 960w" sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw" alt="Битубизес — цифровая лицензия" width="640" height="480" loading="lazy">
                     <h3 class="product-card__title">Битубизес</h3>
                     <p class="product-card__description">Зазеркальный маркер надежности и личной эффективности. Создаётся Большим Алмазом Inc.</p>
                     <p class="product-card__price">Цена: 2 500 руб.</p>

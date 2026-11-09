@@ -7,6 +7,7 @@
     <meta name="description" content="Карточка товара — учебный интернет-магазин.">
     <title>Шапец — Beyond Shop</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
     <link rel="icon" type="image/svg+xml" href="../favicon.svg">
     <script src="../js/main.js" defer></script>
 </head>
@@ -24,9 +25,12 @@
                     <img
                         class="product-detail__image"
                         src="../images/Shapec.png"
+                        srcset="../images/Shapec.png 480w, ../images/Shapec.png 640w, ../images/Shapec.png 960w"
+                        sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
                         alt="Фото Шапца — головного убора статуса в Сумеречной роще"
-                        width="400"
-                        height="300"
+                        width="640"
+                        height="480"
+                        loading="lazy"
                     >
                 </div>
                 <div class="product-detail__info">
@@ -56,6 +60,7 @@
 
         <section class="section" id="characteristics">
             <h2>Характеристики</h2>
+            <div class="table-wrapper">
             <table class="product-table">
                 <caption>Технические характеристики товара</caption>
                 <thead>
@@ -95,6 +100,7 @@
                     </tr>
                 </tbody>
             </table>
+            </div>
         </section>
 
         <section class="section">
