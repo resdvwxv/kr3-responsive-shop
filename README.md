@@ -161,7 +161,24 @@ GitHub Pages: https://resdvwxv.github.io/kr1-html-css-shop/
 - проверены изображения и `alt`-описания;
 - проверены формы и связанные `<label for="...">`;
 - модальное окно использует `<dialog>` с `aria-labelledby`;
-- выполнен Lighthouse-аудит (Accessibility) на 3 страницах:
+- выполнен Lighthouse-аудит (Accessibility) на 3 страницах (методичка требует проверять страницы с формами):
   - `index.html` — **100/100**;
   - `catalog.html` — **100/100**;
-  - `products/shapets.html` — **100/100**.
+  - `order.html` — **100/100**.
+
+### Lighthouse-отчёты
+
+Отчёты и скриншоты сохранены в папке `lighthouse/`:
+
+| Файл | Описание |
+|---|---|
+| `index.html` | HTML-отчёт Lighthouse — главная |
+| `catalog.html` | HTML-отчёт Lighthouse — каталог |
+| `order.html` | HTML-отчёт Lighthouse — форма заявки |
+| `screenshot-index.png` | Скриншот отчёта главной |
+| `screenshot-catalog.png` | Скриншот отчёта каталога |
+| `screenshot-order.png` | Скриншот отчёта формы заявки |
+
+### Исправление изображений
+
+- В `products/shapets.html` у карточек «Похожие товары» добавлены `srcset`, `loading="lazy"`, `width`/`height` (было без них).
