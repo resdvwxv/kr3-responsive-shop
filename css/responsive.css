@@ -262,18 +262,17 @@ body {
 /* --- Адаптивная страница каталога --- */
 
 .catalog-layout {
+  width: min(100% - 32px, 1100px);
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-lg, 24px);
-  max-width: var(--container-width, 1100px);
   margin: 0 auto var(--space-xl);
 }
 
-.catalog-filters {
-  /* order удалён — фильтры в документе идут первыми */
-}
+/*.catalog-filters {
+}*/
 
-@media (min-width: 960px) {
+@media (min-width: 800px) {
   .catalog-layout {
     grid-template-columns: 280px minmax(0, 1fr);
     align-items: start;

@@ -354,6 +354,7 @@ main {
 
 .catalog-products {
   /* grid-area удалён — порядок из документа */
+  padding-right: var(--space-md);
 }
 
 /* --- Фильтры (filters-form) --- */
