@@ -10,27 +10,43 @@
 ## Структура проекта
 
 ```
-kr1-html-css-shop/
-├── index.html        — главная страница (hero-блок, преимущества, популярные товары)
-├── catalog.html      — каталог товаров с фильтрами
-├── product.html      — карточка товара с таблицей характеристик
-├── order.html        — страница оформления заявки
-├── contacts.html     — контактная информация и обратная связь
-├── products/
-│   ├── shapets.html      — Шапец
-│   ├── bitubisas.html    — Битубизес
-│   └── morkovnye-piatki.html — Морковные пятки
-├── morkovnye-piatki.html — зазеркальное блюдо «Морковные пятки»
+kr3-responsive-shop/
+├── catalog.html        — каталог товаров с фильтрами
+├── contacts.html       — контактная информация и обратная связь
 ├── css/
-│   └── style.css     — общие стили (переменные, компоненты, состояния)
+│   ├── responsive.css  — адаптивные стили (Mobile First)
+│   └── style.css       — общие стили (переменные, компоненты, состояния)
+├── doc/
+│   ├── docx/
+│   ├── kr_3.md
+│   ├── pr_12.md
+│   ├── pr_13.md
+│   └── pr_14.md
+├── favicon.svg         — фиолетовый кристалл
+├── images/
+│   ├── Bitubisas.png
+│   ├── glamorous.svg
+│   ├── Morkovniy_piatky.png
+│   └── Shapec.png
+├── index.html          — главная страница (hero-блок, преимущества, популярные товары)
 ├── js/
-│   └── main.js       — модалка, валидация, загрузка шапки, скролл-наверх
-├── images/           — изображения товаров и иконок
+│   └── main.js         — модалка, валидация, загрузка шапки, скролл-наверх
+├── lighthouse/
+│   ├── catalog.html    — HTML-отчёт Lighthouse — каталог
+│   ├── index.html      — HTML-отчёт Lighthouse — главная
+│   ├── order.html      — HTML-отчёт Lighthouse — форма заявки
+│   ├── screenshot-catalog.png
+│   ├── screenshot-index.png
+│   └── screenshot-order.png
+├── order.html          — страница оформления заявки
 ├── partials/
-│   └── header.html   — шапка сайта (подгружается через fetch)
-├── favicon.svg       — фиолетовый кристалл
-├── README.md         — описание проекта
-└── .gitignore        — исключения Git
+│   ├── footer.html     — подвал сайта
+│   └── header.html     — шапка сайта (подгружается через fetch)
+├── products/
+│   ├── bitubisas.html      — Битубизес
+│   ├── morkovnye-piatki.html — Морковные пятки
+│   └── shapets.html        — Шапец
+└── README.md         — описание проекта
 ```
 
 ## Технологии
@@ -53,10 +69,6 @@ kr1-html-css-shop/
 5. Откройте страницу «Товар» — таблица характеристик, кнопка заявки открывает модальное окно.
 6. Страница «Заявка» — полная форма оформления заказа с валидацией.
 7. В консоли браузера ошибок быть не должно.
-
-## Ссылка на опубликованный проект
-
-GitHub Pages: https://resdvwxv.github.io/kr1-html-css-shop/
 
 ## Автор
 
